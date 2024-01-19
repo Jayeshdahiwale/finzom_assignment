@@ -13,13 +13,14 @@ Welcome to the Volatility Calculator, a Django project that calculates daily and
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Jayeshdahiwale/finzom_assignment.git
+    open terminal.
+    Run : git clone https://github.com/Jayeshdahiwale/finzom_assignment.git
 
-    then open terminal and run : cd finzom_assignment
+    and run : cd finzom_assignment
 2. Set up a virtual environment:
     python -m venv venv
     source venv/bin/activate  # For Linux/Mac
-     or
+     #### or
     venv\Scripts\activate  # For Windows
 
 3. Install dependencies:
