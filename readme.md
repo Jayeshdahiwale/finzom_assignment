@@ -15,7 +15,7 @@ Welcome to the Volatility Calculator, a Django project that calculates daily and
     ```bash
     git clone https://github.com/Jayeshdahiwale/finzom_assignment.git
 
-    then open terminal and run : cd volatility-calculator
+    then open terminal and run : cd finzom_assignment
 2. Set up a virtual environment:
     python -m venv venv
     source venv/bin/activate  # For Linux/Mac
