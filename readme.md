@@ -7,8 +7,7 @@ Welcome to the Volatility Calculator, a Django project that calculates daily and
 - [Usage](#usage)
   - [Using the UI](#using-the-ui)
   - [Sending API Requests](#sending-api-requests)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 
