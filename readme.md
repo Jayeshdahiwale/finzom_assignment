@@ -20,7 +20,7 @@ Welcome to the Volatility Calculator, a Django project that calculates daily and
 2. Set up a virtual environment:
     python -m venv venv
     source venv/bin/activate  # For Linux/Mac
-    # or
+     or
     venv\Scripts\activate  # For Windows
 
 3. Install dependencies:
