@@ -1,0 +1,55 @@
+<!-- yourapp/templates/index.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volatility Calculator</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Volatility Calculator</h1>
+</div>
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data" action="{% url 'index' %}" id="uploadForm">
+        {% csrf_token %}
+        <h2>Upload CSV or Excel File</h2>
+        {{ form }}
+        <button type="submit" id="submitButton" disabled>Submit</button>
+    </form>
+
+    {% if volatility_result %}
+        <div id="result">
+            <h3>Volatility Information:</h3>
+            <p>{{ volatility_result|safe }}</p>
+        </div>
+    {% endif %}
+</div>
+
+<script>
+    document.getElementById('id_file').addEventListener('change', function() {
+        var fileInput = this;
+        var submitButton = document.getElementById('submitButton');
+
+        if (fileInput.files.length > 0) {
+            var fileName = fileInput.files[0].name;
+            var fileExtension = fileName.split('.').pop().toLowerCase();
+
+            // Check if the file extension is allowed
+            if (fileExtension === 'csv' || fileExtension === 'xlsx') {
+                submitButton.removeAttribute('disabled');
+            } else {
+                submitButton.setAttribute('disabled', 'disabled');
+                alert('Only CSV or Excel (xlsx) files are allowed.');
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
